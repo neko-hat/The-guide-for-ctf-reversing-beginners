@@ -93,15 +93,15 @@ Assembly에서 중요하게 알아야 할 것은, `함수의 호출 규약과, �
 
 ![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/Untitled.png)
 
-`**[Image - x86 Register]**`
+**`[Image - x86 Register]`**
 
 ![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/Untitled%201.png)
 
-`**[Image - x86 General Register Detail]**`
+**`[Image - x86 General Register Detail]`**
 
 ![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/Untitled%202.png)
 
-`**[Image - x86 Segment Register Detail]**`
+**`[Image - x86 Segment Register Detail]`**
 
 정리한 x86 Register의 역할과 명칭들이다. 64bit는 해당 32bit Register의 확장형 이므로 따로 정리하진 않겠다,
 

@@ -186,13 +186,13 @@ intel 문법의 경우 요약하면 다음처럼 해석된다.(AT&T 문법은 �
 
 | Opcode | 문법 | 의미 |
 | --- | --- | --- |
-| call | call OPERAND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 함수 호출 |
+| call | call OPERAND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 함수 호출 |
 | ret | ret&nbsp;&nbsp;&nbsp;&nbsp; | 호출된 함수 종료, 호출된 다음 명령줄로 이동(return) |
 | nop | nop &nbsp;&nbsp;&nbsp;&nbsp;| 아무것도 하지 않음 |
 | cmp | cmp OPERAND1, OPERAND2&nbsp;&nbsp;&nbsp;&nbsp; | OPERAND1, OPERAND2을 값의 차로 비교. 결과값 저장됨. 값이 같으면 ZF 1로 세팅 |
 | test | test OPERAND1, OPERAND2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | OPERAND1, OPERAND2을 bit and 연산을 이용해 비교. 결과값 저장 안됨. and 연산 결과가 0이면 ZF 1로 세팅 |
 | jmp | jmp OPERAND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| OPERAND로 이동(jump) |
-| je | je OPERAND | cmp A, B에서 A == B일때 jmp. |
+| je | je OPERAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | cmp A, B에서 A == B일때 jmp. |
 | jne | jne OPERAND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| cmp A, B에서 A != B일때 jmp. |
 | ja | ja OPERAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| cmp A, B에서 A > B일때 jmp. |
 | jb | jb OPERAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| cmp A, B에서 A < B일때 jmp. |

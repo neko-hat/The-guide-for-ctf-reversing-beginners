@@ -126,7 +126,7 @@ _start:
 	int 0x80; call exit
 ```
 
-`**[Code - HelloWorld_32bit.s]**`
+**`[Code - HelloWorld_32bit.s]`**
 
 ```nasm
 section .data
@@ -147,7 +147,7 @@ _start:
 	syscall; calling sys_exit with error_code
 ```
 
-`**[Code - HelloWorld_64bit.s]**`
+**`[Code - HelloWorld_64bit.s]`**
 
 위의 두 코드는 위에서부터, x86 Architecture, amd64 Architecture로 작성된 Hello,World 출력 프로그램이다.
 
@@ -172,7 +172,7 @@ _start:
     int  $0x80
 ```
 
-`**[Code - x86_AT&T Grammer Hello World]`(AT&T 문법 코드 예제)**
+**`[Code - x86_AT&T Grammer Hello World]`**(AT&T 문법 코드 예제)**
 
 intel 문법의 경우 요약하면 다음처럼 해석된다.(AT&T 문법은 반대로 해석)
 

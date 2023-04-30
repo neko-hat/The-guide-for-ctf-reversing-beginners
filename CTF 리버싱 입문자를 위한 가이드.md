@@ -202,7 +202,7 @@ intel 문법의 경우 요약하면 다음처럼 해석된다.(AT&T 문법은 �
 | jnz | jnz OPERAND | ZF가 0으로 세팅 되었을 때 jmp. |
 | push | push OPERAND| OPERAND 의 값을 메모리 스택에 푸쉬 |
 | pop | pop OPERAND| OPERAND에 스택의 값을 가져오고 대입. 이후 STACK POINTER는 증가(스택 영역 크기 감소) |
-| mov | mov OPERAND1, OPERAND2&nbsp;&nbsp;| OPERAND1에 OPERAND2의 값을 대입. |
+| mov | mov OPERAND1, OPERAND2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| OPERAND1에 OPERAND2의 값을 대입. |
 | lea | lea OPERAND1, OPERAND2&nbsp;&nbsp;| OPERAND1에 OPERAND2의 주소를 대입. |
 | inc | inc OPERAND&nbsp;&nbsp;| OPERAND의 값을 1 증가 |
 | dec | dec OPERAND | OPERAND의 값을 1 감소 |

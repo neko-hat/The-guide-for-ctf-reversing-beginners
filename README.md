@@ -5,4 +5,4 @@
 
 `I will finish it as soon as possible and upload an English translation`
 <br><br>
-Give any Feedbacks to my Discord(neko_hat#1736)
+Give any Feedbacks to my Discord (neko_hat#1736)

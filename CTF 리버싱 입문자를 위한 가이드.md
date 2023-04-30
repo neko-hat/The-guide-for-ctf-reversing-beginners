@@ -188,7 +188,7 @@ intel 문법의 경우 요약하면 다음처럼 해석된다.(AT&T 문법은 �
 | --- | --- | --- |
 | call | call OPERAND| 함수 호출 |
 | ret | ret| 호출된 함수 종료, 호출된 다음 명령줄로 이동(return) |
-| nop | nop &nbsp;&nbsp;&nbsp;&nbsp;| 아무것도 하지 않음 |
+| nop | nop &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 아무것도 하지 않음 |
 | cmp | cmp OPERAND1, OPERAND2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| OPERAND1, OPERAND2을 값의 차로 비교. 결과값 저장됨. 값이 같으면 ZF 1로 세팅 |
 | test | test OPERAND1, OPERAND2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| OPERAND1, OPERAND2을 bit and 연산을 이용해 비교. 결과값 저장 안됨. and 연산 결과가 0이면 ZF 1로 세팅 |
 | jmp | jmp OPERAND| OPERAND로 이동(jump) |

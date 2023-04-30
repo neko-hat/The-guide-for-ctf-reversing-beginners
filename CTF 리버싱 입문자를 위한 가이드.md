@@ -200,18 +200,18 @@ intel 문법의 경우 요약하면 다음처럼 해석된다.(AT&T 문법은 �
 | jbe | jbe OPERAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;| cmp A, B에서 A ≤ B일때 jmp. |
 | jz | jz OPERAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | ZF가 1로 세팅 되었을 때 jmp. |
 | jnz | jnz OPERAND | ZF가 0으로 세팅 되었을 때 jmp. |
-| push | push OPERAND&nbsp;&nbsp; | OPERAND 의 값을 메모리 스택에 푸쉬 |
+| push | push OPERAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| OPERAND 의 값을 메모리 스택에 푸쉬 |
 | pop | pop OPERAND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| OPERAND에 스택의 값을 가져오고 대입. 이후 STACK POINTER는 증가(스택 영역 크기 감소) |
 | mov | mov OPERAND1, OPERAND2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | OPERAND1에 OPERAND2의 값을 대입. |
 | lea | lea OPERAND1, OPERAND2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| OPERAND1에 OPERAND2의 주소를 대입. |
 | inc | inc OPERAND&nbsp;&nbsp;&nbsp;&nbsp; | OPERAND의 값을 1 증가 |
 | dec | dec OPERAND | OPERAND의 값을 1 감소 |
-| add | add OPERAND1, OPERAND2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | OPERAND1 + OPERAND2 결과값을 OPERAND1에 저장 |
-| sub | sub OPERAND1, OPERAND2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| OPERAND1 - OPERAND2 결과값을 OPERAND1에 저장 |
+| add | add OPERAND1, OPERAND2| OPERAND1 + OPERAND2 결과값을 OPERAND1에 저장 |
+| sub | sub OPERAND1, OPERAND2| OPERAND1 - OPERAND2 결과값을 OPERAND1에 저장 |
 | div | div OPERAND1, OPERAND2&nbsp;&nbsp;&nbsp;&nbsp; | OPERAND1 / OPERAND2 결과값을 OPERAND1에 저장(몫). 나머지는 64bit기준 rdx에 저장.  |
-| imul | imul OPERAND1, OPERAND2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | OPERAND1 * OPERAND2 결과값을 OPERAND1에 저장 |
-| shr | shr OPERAND1, OPERAND2&nbsp;&nbsp; | OPERAND1의 값을 OPERAND2의 값만큼 오른쪽 비트 쉬프트. |
-| shl | shl OPERAND1, OPERAND2&nbsp;&nbsp; | OPERAND1의 값을 OPERAND2의 값만큼 왼쪽 비트 쉬프트. |
+| imul | imul OPERAND1, OPERAND2| OPERAND1 * OPERAND2 결과값을 OPERAND1에 저장 |
+| shr | shr OPERAND1, OPERAND2&nbsp;&nbsp;| OPERAND1의 값을 OPERAND2의 값만큼 오른쪽 비트 쉬프트. |
+| shl | shl OPERAND1, OPERAND2&nbsp;&nbsp;| OPERAND1의 값을 OPERAND2의 값만큼 왼쪽 비트 쉬프트. |
 | int 0x80(32bit) | int 0x80 | eax에  저장되어 있는 값을 기준으로, system call 호출 |
 | syscall(64bit) | syscall | rax에 저장되어 있는 값을 기준으로, system call 호출 |
 

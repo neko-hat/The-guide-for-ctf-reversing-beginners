@@ -194,11 +194,11 @@ intel 문법의 경우 요약하면 다음처럼 해석된다.(AT&T 문법은 �
 | jmp | jmp OPERAND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| OPERAND로 이동(jump) |
 | je | je OPERAND | cmp A, B에서 A == B일때 jmp. |
 | jne | jne OPERAND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| cmp A, B에서 A != B일때 jmp. |
-| ja | ja OPERAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| cmp A, B에서 A > B일때 jmp. |
-| jb | jb OPERAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| cmp A, B에서 A < B일때 jmp. |
-| jae | jae OPERAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | cmp A, B에서 A ≥ B일때 jmp. |
-| jbe | jbe OPERAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | cmp A, B에서 A ≤ B일때 jmp. |
-| jz | jz OPERAND&nbsp;&nbsp; | ZF가 1로 세팅 되었을 때 jmp. |
+| ja | ja OPERAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| cmp A, B에서 A > B일때 jmp. |
+| jb | jb OPERAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| cmp A, B에서 A < B일때 jmp. |
+| jae | jae OPERAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| cmp A, B에서 A ≥ B일때 jmp. |
+| jbe | jbe OPERAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;| cmp A, B에서 A ≤ B일때 jmp. |
+| jz | jz OPERAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | ZF가 1로 세팅 되었을 때 jmp. |
 | jnz | jnz OPERAND | ZF가 0으로 세팅 되었을 때 jmp. |
 | push | push OPERAND | OPERAND 의 값을 메모리 스택에 푸쉬 |
 | pop | pop OPERAND | OPERAND에 스택의 값을 가져오고 대입. 이후 STACK POINTER는 증가(스택 영역 크기 감소) |

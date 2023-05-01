@@ -212,7 +212,7 @@ intel 문법의 경우 요약하면 다음처럼 해석된다.(AT&T 문법은 �
 | imul | imul OPERAND1, OPERAND2&nbsp;&nbsp;| OPERAND1 * OPERAND2 결과값을 OPERAND1에 저장 |
 | shr | shr OPERAND1, OPERAND2&nbsp;&nbsp;| OPERAND1의 값을 OPERAND2의 값만큼 오른쪽 비트 쉬프트. |
 | shl | shl OPERAND1, OPERAND2&nbsp;&nbsp;| OPERAND1의 값을 OPERAND2의 값만큼 왼쪽 비트 쉬프트. |
-| int 0x80(32bit) | int 0x80 | eax에  저장되어 있는 값을 기준으로, system call 호출 |
+| int&nbsp;0x80(32bit) | int 0x80 | eax에  저장되어 있는 값을 기준으로, system call 호출 |
 | syscall(64bit) | syscall | rax에 저장되어 있는 값을 기준으로, system call 호출 |
 
 ### Assembly 코드해석

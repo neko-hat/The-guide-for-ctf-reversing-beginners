@@ -319,8 +319,10 @@ sys_write까지 실행했을 때, welcome 변수의 위치(주소)와 값을 확
 
 ## 2-0. 리버싱 툴 - 환경 구축하기
 
-## 동적 분석 툴 (디버깅)
+<details>
 
+<summary>동적 분석 툴 (디버깅)</summary>
+<div markdown="1">
 ### pwndbg 구축
 
 ```bash
@@ -375,6 +377,9 @@ sudo apt-get update && sudo apt-get install radare2
 **`[Code - radare2 install command]`**
 
 ### x64 dbg 설치
+</div>
+</details>
+
 
 ## 정적 분석 툴(디컴파일러)
 

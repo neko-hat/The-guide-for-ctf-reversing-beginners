@@ -301,7 +301,7 @@ sys_write까지 실행했을 때, welcome 변수의 위치(주소)와 값을 확
 
 ![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg6.png)
 
-`**[Image - sys_wrtie 실행]**`
+**`[Image - sys_wrtie 실행]`**
 
 ![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg7.png)
 
@@ -335,7 +335,7 @@ cd pwndbg && ./setup.sh
 
 ![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg8.png)
 
-`**[Image - setup.sh execution]**`
+**`[Image - setup.sh execution]`**
 
 해당 쉘 스크립트를 위처럼 실행하면, 위의 사진처럼 화면이 나오면서 설치가 진행된다.
 

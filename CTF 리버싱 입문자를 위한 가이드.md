@@ -331,7 +331,7 @@ git clone https://github.com/pwndbg/pwndbg.git
 cd pwndbg && ./setup.sh
 ```
 
-**`[Code - setup.sh]`**(https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/src/setup.sh)   
+**`[Code - [setup.sh]((https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/src/setup.sh))]`**    
 
 ![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg8.png)
 

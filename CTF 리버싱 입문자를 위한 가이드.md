@@ -278,7 +278,7 @@ nasm -f elf32 HelloWorld_32bit.s && ld -m elf_i386 -o HelloWorld_32bit HelloWorl
 
 gdb 실행 `gdb ./HelloWorld_64bit`
 
-![image](Https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg1.png)
+![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg1.png)
 
 `disass _start`명령어를 통해, 작성한 _start 프로시저의 디스어셈블 코드를 확인 할 수 있다.
 
@@ -286,27 +286,27 @@ n(next)명령어를 통해, 코드를 한줄 한줄 실행해보자.
 
 `pwndbg> b _start` → break point를 _start 프로시저에 걸어보자.
 
-![image](Https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg2.png)
+![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg2.png)
 
 이후, r(run)명령어로 프로그램을 실행하면, 해당 프로시저 진입에서 멈추는 것을 확인할 수 있다.
 
-![image](Https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg3.png)
+![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg3.png)
 
 n명령어로, 단계별 실행결과를 바로바로 확인할 수 있다.
 
-![image](Https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg4.png)
+![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg4.png)
 
 sys_write까지 실행했을 때, welcome 변수의 위치(주소)와 값을 확인 할 수 있으며, sys_write에 들어가는 인자들의 역할과 값을 확인할수 있다. 
 
-![image](Https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg5.png)
+![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg5.png)
 
 `x/s <address>`를 통해, 해당 주소에 담긴 값을 문자열로 출력할 수 있다.
 
-![image](Https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg6.png)
+![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg6.png)
 
 `**[Image - sys_wrtie 실행]**`
 
-![image](Https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg7.png)
+![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg7.png)
 
 간단한 Hello, World 출력 프로그램을 (64bit 기준) 디버깅을 완료하였다.
 
@@ -336,13 +336,13 @@ cd pwndbg && ./setup.sh
 
 **`[Code - setup.sh]`**
 
-![image](Https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg8.png)
+![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg8.png)
 
 `**[Image - setup.sh execution]**`
 
 해당 쉘 스크립트를 위처럼 실행하면, 위의 사진처럼 화면이 나오면서 설치가 진행된다.
 
-![image](Https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg9.png)
+![image](https://github.com/neko-hat/The-guide-for-ctf-reversing-beginners/blob/main/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/HelloPwndbg9.png)
 
 이후, `gdb`명령어를 통해, `pwndbg>`가 나오면 설치가 완료된 것이다.
 
@@ -351,24 +351,14 @@ cd pwndbg && ./setup.sh
 | command | Detail |
 | --- | --- |
 | b(break) (*)address / function name | 해당 address, function name에 break point 생성 |
-| r(run) | program 실행
-(실행중 break point를 만나면 해당 point에서 멈춤) |
+| r(run) | program 실행<br>(실행중 break point를 만나면 해당 point에서 멈춤) |
 | c(conitnue) | program 실행 이후, break point까지 실행  |
-| n(next) | step over.
-한단계씩 코드를 실행하지만, 함수 내부로 들어가지 않음 |
-| s(step into) | step into.
-한단계씩 코드를 실행하며, 함수 내부로 들어간다. |
-| p/[type] (*)[value] | [value]를 [type]에 맞게 출력.
-type 종류
-1. s → string
-2. x → hex
-3. d → digit
-4. u → unsigned
-5. c → char |
+| n(next) | step over.<br>한단계씩 코드를 실행하지만, 함수 내부로 들어가지 않음 |
+| s(step into) | step into.<br>한단계씩 코드를 실행하며, 함수 내부로 들어간다. |
+| p/[type] (*)[value] | [value]를 [type]에 맞게 출력.<br>type 종류<br>1. s → string<br>2. x → hex<br>3. d → digit<br>4. u → unsigned<br>5. c → char |
 | x/(count)[type]w [address] | 4바이트씩, [address]에 저장된 값을 tyoe에 맞게 출력 |
 | x/(count)[type]g [address] | 8바이트씩, [address]에 저장된 값을 tyoe에 맞게 출력 |
-| vmmap (address) | 전체 메모리 멥 출력.
-(address)가 속한 메모리 멥 출력 |
+| vmmap (address) | 전체 메모리 멥 출력.<br>(address)가 속한 메모리 멥 출력 |
 | pd | program이 동작중일 때, 해당 부분의 일부분 disassembly 코드 출력. |
 | disass (*)address / function name | address, function name의 전체 disassembly 코드 출력. |
 | start | 프로그램 시작점 (start)도달 |

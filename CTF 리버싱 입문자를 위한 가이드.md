@@ -322,7 +322,7 @@ sys_write까지 실행했을 때, welcome 변수의 위치(주소)와 값을 확
 <details>
 
 <summary>동적 분석 툴 (디버깅)</summary>
-<div markdown="1">
+<div markdown="1"><br>
 ### pwndbg 구축
 
 ```bash
@@ -380,14 +380,19 @@ sudo apt-get update && sudo apt-get install radare2
 </div>
 </details>
 
+<details>
 
-## 정적 분석 툴(디컴파일러)
+<summary>정적 분석 툴(디컴파일러)</summary>
+<div markdown="1"><br>
 
 ### IDA 설치
 
 ### Ghidra 설치
 
 ### Binary Ninja 설치
+</div>
+</details>
+
 
 ## 2-1. C Hello, World PE File로 리버싱 입문하기(Windows)
 

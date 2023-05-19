@@ -403,7 +403,7 @@ r2 -w <filename> # write 모드 (주로 patch할 때 사용)
 
 **radare2 내부 분석 명령어**
 
-| opcode | detail |
+| Command | Detail |
 | --- | --- |
 | aa(analy경ze all) | 바이너리 분석 실행 |
 | aaa | aa + aar, aac 명령어의 일괄 실행 |

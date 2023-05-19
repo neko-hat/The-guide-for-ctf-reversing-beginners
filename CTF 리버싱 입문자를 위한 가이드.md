@@ -375,6 +375,63 @@ sudo apt-get update && sudo apt-get install radare2
 ```
 
 **`[Code - radare2 install command]`**
+radare2는 리버스 엔지니어링을 위한 패키지이다.
+
+대표적으로 3가지 프로그램이 내장되어 있는데, rabin2, rasm2, r2이다.
+
+rabin2는 바이너리 정보 확인, rasm2는 어셈블러 / 디스어셈블러, r2는 전체 분석 툴이다,(동적, 정적 분석 둘다 가능)
+
+```bash
+rabin2 -I <filename>
+```
+
+rabin2의 간단 사용법이다.
+
+![image](/CTF 리버싱 입문자를 위한 가이드/rabin2_example.png)
+
+실행결과는 위와 같이, 바이너리의 Architecture, endian 형식 등 정보가 출력되는 것을 확인 할 수 있다.
+
+**r2 사용법**
+
+```bash
+r2 <filename> # 정적 분석 모드
+
+r2 -d <filename> # 동적 분석 (디버깅) 모드
+
+r2 -w <filename> # write 모드 (주로 patch할 때 사용)
+```
+
+**radare2 내부 분석 명령어**
+
+| opcode | detail |
+| --- | --- |
+| aa(analy경ze all) | 바이너리 분석 실행 |
+| aaa | aa + aar, aac 명령어의 일괄 실행 |
+| aac(Analyze Function Call) | 함수 호출 분석 |
+| aar | Analyze len bytes of instructions for references |
+| aaaa | aaa보다 시간이 오래걸림, aaa에서 안잡히는 것이 잡힌다 생각하면 편하다. |
+| afl | r2가 분석한 symbol, label 출력 |
+| ~ | opcode 뒤에 붙으며, linux의 grep처럼 사용 가능하다. |
+| afn name1 name2 | name2의 함수 이름을 name1으로 변경 |
+| pdf (@function) | (function_name(addr)의 )디스어셈블리 확인 |
+| pd (@object) | (object_name(addr) )개체 디스어셈블 |
+| s function_name(addr) | 현재 탐색 위치 변경 |
+| VV | 바이너리 그래프 모드 출력, [tab]키를 통해 노드 위치 변경 가능.
+[g]키를 통해 노드 선택, [q] 입력으로 나가기,
+[,]입력으로 현재 노드로 돌아가기, [x] 키로 현재 노드의 참조 위치 확인. |
+| px size @addr | addr부터 size만큼 hexdump 출력. |
+| fs | flagspace를 보여줌. |
+| axt addr | addr에 담긴 문자열의 참조를 찾는다. |
+| axt  @@ str.(str_sym_name) | 플래그 지정으로 문자열 참조를 찾는다. |
+| izzq | 모든 문자열 출력 (~와 연계하여 검색 가능) |
+|  |  |
+| db | Break Point 확인 |
+| db function(addr) | funciton (addr)에 Break Point 세팅 |
+| db -functio(addr) | Break Point 해제 |
+| dr | 레지스터 상태 확인 |
+| afvd | 생성된 변수 상태 확인 |
+| ood (arg1 arg2) | 재실행, 인자 넣어 재실행도 가능 |
+| dc | 프로그램 종료 확인(return code 확인 가능) |
 
 ### x64 dbg 설치
 </div>

@@ -416,15 +416,12 @@ r2 -w <filename> # write 모드 (주로 patch할 때 사용)
 | pdf (@function) | (function_name(addr)의 )디스어셈블리 확인 |
 | pd (@object) | (object_name(addr) )개체 디스어셈블 |
 | s function_name(addr) | 현재 탐색 위치 변경 |
-| VV | 바이너리 그래프 모드 출력, [tab]키를 통해 노드 위치 변경 가능.
-[g]키를 통해 노드 선택, [q] 입력으로 나가기,
-[,]입력으로 현재 노드로 돌아가기, [x] 키로 현재 노드의 참조 위치 확인. |
+| VV | 바이너리 그래프 모드 출력, [tab]키를 통해 노드 위치 변경 가능.<br>[g]키를 통해 노드 선택, [q] 입력으로 나가기,<br>[,]입력으로 현재 노드로 돌아가기, [x] 키로 현재 노드의 참조 위치 확인. |
 | px size @addr | addr부터 size만큼 hexdump 출력. |
 | fs | flagspace를 보여줌. |
 | axt addr | addr에 담긴 문자열의 참조를 찾는다. |
 | axt  @@ str.(str_sym_name) | 플래그 지정으로 문자열 참조를 찾는다. |
 | izzq | 모든 문자열 출력 (~와 연계하여 검색 가능) |
-|  |  |
 | db | Break Point 확인 |
 | db function(addr) | funciton (addr)에 Break Point 세팅 |
 | db -functio(addr) | Break Point 해제 |

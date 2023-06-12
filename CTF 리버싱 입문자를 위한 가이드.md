@@ -371,7 +371,7 @@ mov rpb, rsp
 
 함수 호출 전의 기존 base를 stack에 저장하고, 이후 `sub rsp, 0x10`명령을 통해, `Local Variables`공간을 만들기 위한 과정인 것이다.
 
-이 과정을 **`Function Prolog`**라고 한다.
+이 과정을 `**Function Prolog**`라고 한다.
 
 ![Function_Prolog.png](/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/Function_Prolog.png)
 

@@ -313,7 +313,7 @@ sys_write까지 실행했을 때, welcome 변수의 위치(주소)와 값을 확
 
 ### 메모리 구조
 
-![memory_structure.png](/CTF%20%E1%84%85%E1%85%B5%E1%84%87%E1%85%A5%E1%84%89%E1%85%B5%E1%86%BC%20%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A1%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A1%E1%86%AB%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3/memory_structure.png)
+![memory_structure.png](/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/memory_structure.png)
 
 `**[Image - Memory Structure]**`
 
@@ -325,7 +325,7 @@ sys_write까지 실행했을 때, welcome 변수의 위치(주소)와 값을 확
 
 **Stack Frame**
 
-![stack_frame.png](/CTF%20%E1%84%85%E1%85%B5%E1%84%87%E1%85%A5%E1%84%89%E1%85%B5%E1%86%BC%20%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A1%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A1%E1%86%AB%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3/stack_frame.png)
+![stack_frame.png](/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/stack_frame.png)
 
 `**[Image - Stack Frame]**`
 

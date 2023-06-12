@@ -313,7 +313,7 @@ sys_write까지 실행했을 때, welcome 변수의 위치(주소)와 값을 확
 
 ### 메모리 구조
 
-![memory_structure.png](/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/memory_structure.png)
+<img src="/CTF 리버싱 입문자를 위한 가이드/memory_structure.png" alt="memory_structure.png" style="width:300px;height:auto;">
 
 **`[Image - Memory Structure]`**
 

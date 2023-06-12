@@ -313,6 +313,98 @@ sys_write까지 실행했을 때, welcome 변수의 위치(주소)와 값을 확
 
 ### 메모리 구조
 
+![memory_structure.png](/CTF%20%E1%84%85%E1%85%B5%E1%84%87%E1%85%A5%E1%84%89%E1%85%B5%E1%86%BC%20%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A1%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A1%E1%86%AB%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3/memory_structure.png)
+
+`**[Image - Memory Structure]**`
+
+전반적인 메모리 구조는 위의 사진과 같다.
+
+상위 주소에는 Code 영역 Data 영역 Heap 영역 순으로 메모리가 구성되며, 상위 주소에는 Stack 영역이 있다.
+
+이 중 중요하게 봐야 할 영역은 `Stack 영역`이다.
+
+**Stack Frame**
+
+![stack_frame.png](/CTF%20%E1%84%85%E1%85%B5%E1%84%87%E1%85%A5%E1%84%89%E1%85%B5%E1%86%BC%20%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A1%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A1%E1%86%AB%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3/stack_frame.png)
+
+`**[Image - Stack Frame]**`
+
+기본적인 stack frame 구조는 위와 같다.
+
+기본적으로 함수 하나당 stack frame은 `Parameter, RET, Local Variables`로 구성되어 있으며, 함수가 호출 될 때마다, 해당 frame이 쌓이고, 함수가 종료되면, 해당 stack frame이 정리된다.
+
+### **Assembly로 보는 Stack Frame**
+
+**함수 프롤로그**
+
+우선 아래의 코드를 컴파일 한 후 살펴보자.
+
+```c
+//gcc -o StackFrame StackFrame.c
+
+#include <stdio.h>
+
+int main(void)
+{
+    char buf[0x10];
+    scanf("%16s", buf);
+    printf("%s", buf);
+
+    return 0;
+}
+```
+
+0x10바이트의 `buf`에 입력값을 저장하고, `buf`를 출력하는 간단한 코드다. `gdb`에서 `disassebly` 코드를 살펴보자,
+
+![Untitled](/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/StackFrame-Assembly.png)
+
+`**[Image - disass main]**`
+
+```nasm
+push rbp
+mov rpb, rsp
+```
+
+위의 두 코드를 `Function Prolog(함수 프롤로그)`라고 한다.
+
+함수가 시작하면서, 본래의 `base pointer`값인 `rbp`를 push하고, `rbp`에 `rsp`값을 저장한다.
+
+함수 호출 전의 기존 base를 stack에 저장하고, 이후 `sub rsp, 0x10`명령을 통해, `Local Variables`공간을 만들기 위한 과정인 것이다.
+
+이 과정을 **`Function Prolog`**라고 한다.
+
+![Function_Prolog.png](/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/Function_Prolog.png)
+
+`**[Image - Function Prolog]**`
+
+**함수 에필로그**
+
+```nasm
+leave
+ret
+```
+
+결론부터 말하자면, 위의 두 코드가 `함수의 에필로그(Function Epilog)`이다.
+
+함수의 에필로그에서는, 함수 종료를 위해 `스택을 정리`하며, 함수가 호출된 곳으로 돌아간다(`ret`)
+
+`leave`명령어는 다음의 의미를 가진다.
+
+```nasm
+mov rsp, rbp
+pop rbp
+```
+
+`ret`명령어는 다음의 의미를 가진다.
+
+```nasm
+pop rip
+jmp rip
+```
+
+![Function_Epillog.png](/CTF%20%EB%A6%AC%EB%B2%84%EC%8B%B1%20%EC%9E%85%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C/Function_Epillog.png)
+`**[image - Function Epilog]**`
+
 ### 함수 호출 규약
 
 # 챕터 2. 리버싱 찍먹하기
